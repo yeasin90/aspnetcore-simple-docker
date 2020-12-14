@@ -16,13 +16,9 @@ Why? check this : https://github.com/docker/for-win/issues/9701#event-4076070225
 
 ![add-docker-support](https://user-images.githubusercontent.com/8789577/101279116-4259fa00-37ea-11eb-9e50-0ab917f8fdc6.jpg)
 
-4.2 There will be a DockerFile inside startup project folder. Move it to solution directory : 
+4.2 From Visual Studio, select Tools->Command Line->Developer Command prompt
 
-![docker-file-solution-directory](https://user-images.githubusercontent.com/8789577/101279181-abda0880-37ea-11eb-919e-9f267422f73b.JPG)
-
-4.3 From Visual Studio, select Tools->Command Line->Developer Command prompt
-
-4.4 Build a docker image for your project with below command = **docker build -t mydockertrial:development .** 
+4.3 Build a docker image for your project with below command = **docker build -f Dockerfile -t mydockertrial:development ..** (https://github.com/Microsoft/DockerTools/issues/167)
 
 here, [mydockertrial] = docker image name, user defined. [developerment] = tag name, user defined.
 
@@ -30,7 +26,7 @@ After this command is executed, you will see your image in Docker Desktop images
 
 ![my-docker-image](https://user-images.githubusercontent.com/8789577/101279262-42a6c500-37eb-11eb-86b8-b26ee8657cc3.JPG)
 
-4.5 Run this image in Docker Container with command : **docker run -p 1234:80 --name testdockercontainer mydockertrial:development**
+4.4 Run this image in Docker Container with command : **docker run -p 1234:80 --name testdockercontainer mydockertrial:development**
 
 here, [testdockercontainer] = my docker container name, user defined. 
 
