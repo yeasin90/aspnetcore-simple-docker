@@ -1,4 +1,4 @@
-# Very simple practice of running an ASP.NET Core Web Api with Docker Desktop.
+# Running an ASP.NET Core Web Api with Docker Desktop.
 
 1. For Windows 10 Home, OS build must be 1903 or higher. Noe that Windows container is not supported for Windows 10 Home. You will only be able to use Linux Container from  Docker Desktop and cannot switch to Windows container. 
 
